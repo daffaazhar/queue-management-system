@@ -17,8 +17,8 @@ const DisplayView: React.FC<DisplayViewProps> = ({
   const formattedNumber = (num: number) => num.toString().padStart(3, "0");
 
   return (
-    <div className="flex-1 flex flex-col bg-[#FFEB3B] text-gray-900">
-      <header className="bg-white/90 backdrop-blur shadow-md px-10 py-6 flex items-center justify-between border-b-4 border-red-600">
+    <div className="flex-1 flex flex-col bg-gray-50 text-gray-900">
+      <header className="bg-white px-10 py-6 flex items-center justify-between border-b-4 border-[#FFD700]">
         <div className="flex items-center gap-6">
           <img
             src="/Danantara_Logo.svg"
@@ -27,10 +27,10 @@ const DisplayView: React.FC<DisplayViewProps> = ({
             height={200}
           />
           <div>
-            <h1 className="text-4xl font-extrabold tracking-tighter text-red-600">
+            <h1 className="text-4xl font-extrabold tracking-tighter text-[#0054A6]">
               SMART QUEUE
             </h1>
-            <p className="text-blue-600 font-bold uppercase tracking-widest text-sm">
+            <p className="text-[#00AEEF] font-bold uppercase tracking-widest text-sm">
               Customer Service Center
             </p>
           </div>
@@ -59,33 +59,33 @@ const DisplayView: React.FC<DisplayViewProps> = ({
       {/* Main Content */}
       <main className="flex-1 flex flex-col md:flex-row p-10 gap-10">
         {/* Now Serving */}
-        <div className="flex-1 bg-white rounded-3xl shadow-2xl border-8 border-red-600 flex flex-col items-center justify-center p-12 relative overflow-hidden group">
-          <div className="absolute top-0 left-0 w-full h-4 bg-blue-500"></div>
-          <h2 className="text-5xl font-black text-gray-400 uppercase tracking-widest mb-4">
-            Nomor Antrian
+        <div className="flex-1 bg-white rounded-3xl shadow-xl border-4 border-[#00AEEF] flex flex-col items-center justify-center p-12 relative overflow-hidden group">
+          <div className="absolute top-0 left-0 w-full h-2 bg-[#00AEEF]/10"></div>
+          <h2 className="text-3xl font-black text-[#0054A6] uppercase tracking-[0.2em] mb-8">
+            SEDANG DILAYANI
           </h2>
-          <div className="text-[20rem] leading-none font-black text-red-600 transition-all duration-500 scale-100 group-hover:scale-105">
+          <div className="text-[20rem] leading-none font-black text-[#E31E24] transition-all duration-500 scale-100 group-hover:scale-105">
             {formattedNumber(state.currentNumber)}
           </div>
           <div className="w-full h-2 bg-gray-100 rounded-full my-8"></div>
-          <p className="text-4xl font-bold text-blue-600 animate-pulse-slow">
+          <p className="text-3xl font-bold text-[#E31E24] tracking-widest">
             SILAKAN KE LOKET PELAYANAN
           </p>
         </div>
 
         {/* Next & Secondary Info */}
         <div className="w-full md:w-1/3 flex flex-col gap-10">
-          <div className="bg-blue-600 text-white rounded-3xl shadow-xl border-4 border-white flex-1 p-8 flex flex-col items-center justify-center text-center">
-            <h3 className="text-2xl font-bold uppercase tracking-widest mb-2 opacity-80">
+          <div className="bg-[#00AEEF] text-white rounded-3xl shadow-lg flex-1 p-8 flex flex-col items-center justify-center text-center">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 opacity-100">
               Antrian Berikutnya
             </h3>
-            <div className="text-8xl font-black">
+            <div className="text-9xl font-black">
               {formattedNumber(state.nextNumber)}
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl border-4 border-red-600 p-10 flex flex-col items-center justify-center text-center flex-1">
-            <p className="text-3xl font-black text-gray-800 leading-tight uppercase">
+          <div className="bg-[#FFD700] rounded-3xl shadow-lg p-10 flex flex-col items-center justify-center text-center flex-1">
+            <p className="text-xl font-black text-[#0054A6] leading-tight uppercase">
               Siapkan berkas ID Pelanggan dan berkas Anda untuk mempercepat
               proses
             </p>
@@ -94,10 +94,10 @@ const DisplayView: React.FC<DisplayViewProps> = ({
       </main>
 
       {/* Marquee Footer */}
-      <footer className="h-20 bg-red-600 border-t-8 border-[#FFEB3B] flex items-center overflow-hidden relative">
-        <div className="absolute left-0 h-full bg-blue-600 px-8 flex items-center z-10 shadow-xl border-r-4 border-white">
-          <span className="text-white font-black text-2xl italic tracking-tighter">
-            WARTA
+      <footer className="h-24 bg-[#0054A6] border-t-8 border-[#FFD700] flex items-center overflow-hidden relative">
+        <div className="absolute left-0 h-full bg-white px-8 flex items-center z-10 shadow-xl border-r-4 border-[#FFD700]">
+          <span className="text-[#0054A6] font-black text-3xl italic tracking-tighter">
+            INFO
           </span>
         </div>
         <div className="w-full overflow-hidden">
